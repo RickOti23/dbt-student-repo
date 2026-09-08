@@ -1,3 +1,4 @@
+{{ config(materialized='ephemeral') }}
 with  raw_listings as (Select 
 *
 From airbnb.raw.raw_listings)
