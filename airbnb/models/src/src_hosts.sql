@@ -1,7 +1,7 @@
 {{ config(materialized='ephemeral') }}
 with raw_hosts as (
 Select *
-From airbnb.raw.raw_hosts
+From {{ source('airbnb','hosts')}}
 )
 
 Select 

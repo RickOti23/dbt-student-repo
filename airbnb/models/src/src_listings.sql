@@ -1,7 +1,7 @@
 {{ config(materialized='ephemeral') }}
 with  raw_listings as (Select 
 *
-From airbnb.raw.raw_listings)
+From {{ source('airbnb','listings')}})
 
 Select 
     id as listing_id,

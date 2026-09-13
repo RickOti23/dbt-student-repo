@@ -2,7 +2,7 @@
 with 
     src_reviews as (
 Select *
-From airbnb.raw.raw_reviews
+From {{ source('airbnb','reviews')}}
     )
 Select 
 date as review_date,
